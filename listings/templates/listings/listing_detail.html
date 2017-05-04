@@ -1,0 +1,15 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+  <div class="listing">
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{ listing.type }} - {{ listing.title }}</div>
+      <div class="panel-body">
+        <p>{{ listing.description }}</p>
+        <p>{{ listing.pickup_location }}</p>
+        <p>{{ listing.pickup_time }}</p>
+        <p>{{ listing.list_duration }}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

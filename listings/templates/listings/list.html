@@ -1,0 +1,14 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+  {% for listing in listings %}
+    <a href="{% url 'listing_detail' pk=listing.pk %}">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{{ listing.type }} - {{ listing.title }}</div>
+        <div class="panel-body">
+          <p>{{ listing.description }}</p>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+{% endblock %}
